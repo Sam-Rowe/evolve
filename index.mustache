@@ -1,175 +1,59 @@
-<!doctype html>
-<html lang="en">
+{{> header}}
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <meta property="og:title" content="Learn Wardley Mapping">
-    <meta property="og:description" content="A visual method for exploring, understanding, and communicating strategy under circumstances of constant change.">
-    <meta property="og:image" content="https://learnwardleymapping.com/images/terrain_map.jpg">
-    <meta property="og:url" content="https://learnwardleymapping.com">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://learnwardleymapping.com/images/terrain_map.jpg">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Learn Wardley Mapping</title>
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">LearnWardleyMapping</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" target="_blank" href="https://medium.com/wardleymaps/on-being-lost-2ef5f05eb1ec">free book</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" target="_blank" href="https://learn.hiredthought.com/p/wardley-mapping">free course</a>
-                </li>
-                <li class=" nav-item">
-                    <strong><a class="nav-link" target="_blank" href="https://patreon.com/learnwardleymapping">support this work</a></strong>
-                </li>
-            </ul>
-            <span class="navbar-text">
-                operated by <a target="blank" href="https://hiredthought.com">Hired Thought</a>
-            </span>
-        </div>
-    </nav>
-    <div class="container-fluid">
-        <div class="row mt-3 mb-4">
-            <div class="col-12 col-sm-3 col-lg-2">
-                <ul class="nav flex-column nav-pills" id="myTab" role="tablist" aria-orientation="vertical">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="introduction-tab" data-toggle="tab" href="#introduction" role="tab" aria-controls="introduction" aria-selected="true">Introduction</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="purpose-tab" data-toggle="tab" href="#purpose" role="tab" aria-controls="purpose" aria-selected="true">1. Purpose</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="landscape-tab" data-toggle="tab" href="#landscape" role="tab" aria-controls="landscape" aria-selected="true">2. Landscape</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="climate-tab" data-toggle="tab" href="#climate" role="tab" aria-controls="climate" aria-selected="false">3. Climate</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="doctrine-tab" data-toggle="tab" href="#doctrine" role="tab" aria-controls="doctrine" aria-selected="false">4. Doctrine</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="leadership-tab" data-toggle="tab" href="#leadership" role="tab" aria-controls="leadership" aria-selected="false">5. Leadership</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="glossary-tab" data-toggle="tab" href="#glossary" role="tab" aria-controls="glossary" aria-selected="false">Glossary</a>
-                    </li>
-                </ul>
-                <br />
-                <a href="https://www.patreon.com/bePatron?u=8670881" data-patreon-widget-type="become-patron-button">Become a Patron!</a>
-                <script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+<div class="row mt-3 mb-4">
+    <div class="col-12 col-sm-3 col-lg-2">
+        <ul class="nav flex-column nav-pills" id="myTab" role="tablist" aria-orientation="vertical">
+            <li class="nav-item">
+                <a class="nav-link active" id="introduction-tab" data-toggle="tab" href="#introduction" role="tab" aria-controls="introduction" aria-selected="true">Introduction</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="purpose-tab" data-toggle="tab" href="#purpose" role="tab" aria-controls="purpose" aria-selected="true">1. Purpose</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="landscape-tab" data-toggle="tab" href="#landscape" role="tab" aria-controls="landscape" aria-selected="true">2. Landscape</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="climate-tab" data-toggle="tab" href="#climate" role="tab" aria-controls="climate" aria-selected="false">3. Climate</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="doctrine-tab" data-toggle="tab" href="#doctrine" role="tab" aria-controls="doctrine" aria-selected="false">4. Doctrine</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="leadership-tab" data-toggle="tab" href="#leadership" role="tab" aria-controls="leadership" aria-selected="false">5. Leadership</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="glossary-tab" data-toggle="tab" href="#glossary" role="tab" aria-controls="glossary" aria-selected="false">Glossary</a>
+            </li>
+        </ul>
+        <br />
+        <a href="https://www.patreon.com/bePatron?u=8670881" data-patreon-widget-type="become-patron-button">Become a Patron!</a>
+        <script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+    </div>
+    <div class="col-12 col-sm-9 col-lg-10">
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="introduction" role="tabpanel" aria-labelledby="introduction-tab">
+                {{> introduction}}
             </div>
-            <div class="col-12 col-sm-9 col-lg-10">
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="introduction" role="tabpanel" aria-labelledby="introduction-tab">
-                        {{> introduction}}
-                    </div>
-                    <div class="tab-pane fade" id="purpose" role="tabpanel" aria-labelledby="purpose-tab">
-                        {{> purpose}}
-                    </div>
-                    <div class="tab-pane fade" id="landscape" role="tabpanel" aria-labelledby="landscape-tab">
-                        {{> landscape}}
-                    </div>
-                    <div class="tab-pane fade" id="climate" role="tabpanel" aria-labelledby="climate-tab">
-                        {{> climate}}
-                    </div>
-                    <div class="tab-pane fade" id="doctrine" role="tabpanel" aria-labelledby="doctrine-tab">
-                        {{> doctrine}}
-                    </div>
-                    <div class="tab-pane fade" id="leadership" role="tabpanel" aria-labelledby="leadership-tab">
-                        {{> leadership}}
-                    </div>
-                    <div class="tab-pane fade" id="glossary" role="tabpanel" aria-labelledby="glossary-tab">
-                        {{> glossary}}
-                    </div>
-                </div>
+            <div class="tab-pane fade" id="purpose" role="tabpanel" aria-labelledby="purpose-tab">
+                {{> purpose}}
+            </div>
+            <div class="tab-pane fade" id="landscape" role="tabpanel" aria-labelledby="landscape-tab">
+                {{> landscape}}
+            </div>
+            <div class="tab-pane fade" id="climate" role="tabpanel" aria-labelledby="climate-tab">
+                {{> climate}}
+            </div>
+            <div class="tab-pane fade" id="doctrine" role="tabpanel" aria-labelledby="doctrine-tab">
+                {{> doctrine}}
+            </div>
+            <div class="tab-pane fade" id="leadership" role="tabpanel" aria-labelledby="leadership-tab">
+                {{> leadership}}
+            </div>
+            <div class="tab-pane fade" id="glossary" role="tabpanel" aria-labelledby="glossary-tab">
+                {{> glossary}}
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.3.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
-    <script>
-        $(function() {
-            var hash = window.location.hash;
-            hash && $('ul.nav a[href="' + hash + '"]').tab('show');
-
-            $('.nav-item a').click(function(e) {
-                $(this).tab('show');
-                var scrollmem = $('body').scrollTop() || $('html').scrollTop();
-                window.location.hash = this.hash;
-                $('html,body').scrollTop(scrollmem);
-            });
-        });
-    </script>
-
-    <script>
-        window.onload = function() {
-            $("td.markable").on("click", function(e) {
-                $(this).toggleClass("table-info");
-            });
-            $("td.rotated-markable").on("click", function(e) {
-                if ($(this).hasClass("rotated-markable-danger")) {
-                    $(this).toggleClass("rotated-markable-danger");
-                    $(this).toggleClass("rotated-markable-warning");
-                } else if ($(this).hasClass("rotated-markable-warning")) {
-                    $(this).toggleClass("rotated-markable-warning");
-                    $(this).toggleClass("rotated-markable-success");
-                } else if ($(this).hasClass("rotated-markable-success")) {
-                    $(this).toggleClass("rotated-markable-success");
-                    $(this).toggleClass("rotated-markable-neutral");
-                } else if ($(this).hasClass("rotated-markable-neutral")) {
-                    $(this).toggleClass("rotated-markable-neutral");
-                    $(this).toggleClass("rotated-markable-danger");
-                }
-            });
-        };
-    </script>
-
-    <script>
-        $(function() {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-    </script>
-
-    <script>
-        window.pipedriveLeadboosterConfig = {
-            base: 'leadbooster-chat.pipedrive.com',
-            companyId: 5307067,
-            playbookId: 5439
-        };
-    </script>
-    <script src="https://leadbooster-chat.pipedrive.com/assets/loader.js" async></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-51537292-5"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-51537292-5');
-    </script>
-</body>
-
-</html>
+{{> footer}}

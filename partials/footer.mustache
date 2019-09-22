@@ -1,0 +1,66 @@
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+    $(function() {
+        var hash = window.location.hash;
+        hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+
+        $('.nav-item a').click(function(e) {
+            $(this).tab('show');
+            var scrollmem = $('body').scrollTop() || $('html').scrollTop();
+            window.location.hash = this.hash;
+            $('html,body').scrollTop(scrollmem);
+        });
+    });
+</script>
+
+<script>
+    window.onload = function() {
+        $("td.markable").on("click", function(e) {
+            $(this).toggleClass("table-info");
+        });
+        $("td.rotated-markable").on("click", function(e) {
+            if ($(this).hasClass("rotated-markable-danger")) {
+                $(this).toggleClass("rotated-markable-danger");
+                $(this).toggleClass("rotated-markable-warning");
+            } else if ($(this).hasClass("rotated-markable-warning")) {
+                $(this).toggleClass("rotated-markable-warning");
+                $(this).toggleClass("rotated-markable-success");
+            } else if ($(this).hasClass("rotated-markable-success")) {
+                $(this).toggleClass("rotated-markable-success");
+                $(this).toggleClass("rotated-markable-neutral");
+            } else if ($(this).hasClass("rotated-markable-neutral")) {
+                $(this).toggleClass("rotated-markable-neutral");
+                $(this).toggleClass("rotated-markable-danger");
+            }
+        });
+    };
+</script>
+
+<script>
+    $(function() {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-51537292-5"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-51537292-5');
+</script>
+</body>
+
+</html>
