@@ -2,12 +2,9 @@
 <div class="row mt-3 mb-4">
     <div class="col-12 col-sm-3 col-lg-2">
         <ul class="nav flex-column nav-pills" id="myTab" role="tablist" aria-orientation="vertical">
-            <li class="nav-item">
-                <a class="nav-link active" id="introduction-tab" data-toggle="tab" href="#introduction" role="tab" aria-controls="introduction" aria-selected="true">Introduction</a>
-            </li>
             {{#book}}
                 <li class="nav-item">
-                    <a class="nav-link" id="chapter-{{chapter}}-tab" data-toggle="tab" href="#chapter-{{chapter}}" role="tab" aria-controls="chapter-{{chapter}}">{{chapter}}. {{title}}</a>
+                    <a class="nav-link {{#selected}}active{{/selected}}" id="chapter-{{chapter}}-tab" data-toggle="tab" href="#chapter-{{chapter}}" role="tab" aria-controls="chapter-{{chapter}}" {{#selected}} aria-selected="true" {{/selected}}>{{chapter}}. {{title}}</a>
                 </li>
             {{/book}}
         </ul>
@@ -17,10 +14,8 @@
     </div>
     <div class="col-12 col-sm-9 col-lg-10">
         <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="introduction" role="tabpanel" aria-labelledby="introduction-tab">
-            </div>
             {{#book}}
-                <div class="tab-pane fade" id="chapter-{{chapter}}" role="tabpanel" aria-labelledby="chapter-{{chapter}}-tab">
+                <div class="tab-pane fade {{#selected}}show active{{/selected}}" id="chapter-{{chapter}}" role="tabpanel" aria-labelledby="chapter-{{chapter}}-tab">
                     <h1>{{chapter}}. {{title}}</h1>
                     <div class="row">
                         <div class="col-12 col-xl-8">
@@ -38,7 +33,7 @@
                                 </div>
                                 <div class="single-post-content-wrapper p-3">
                                     <blockquote class="blockquote">
-                                        <p>{{excerpt}}</p>
+                                        <p>{{{excerpt}}}</p>
                                         <footer class="blockquote-footer"><a target="_blank" href="https://twitter.com/swardley">Simon Wardley</a> in <cite title="{{title}}">{{title}}</cite>, <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">Creative Commons Attribution-ShareAlike 4.0</a></footer>
                                     </blockquote>
                                     <p><a class="btn btn-secondary btn-lg" target="_blank" href="{{read-link}}" role="button">Read the rest on Medium ({{read-time}})</a></p>
