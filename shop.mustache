@@ -1,0 +1,43 @@
+{{> header}}
+<div class="row mt-3 mb-4">
+    <div class="col-12 col-sm-2 col-lg-2">
+        <ul class="nav flex-column nav-pills" id="myTab" role="tablist" aria-orientation="vertical">
+            {{#products}}
+                <li class="nav-item">
+                    <a class="nav-link {{#selected}}active{{/selected}}" id="products-{{category}}-tab" data-toggle="tab" href="#products-{{category}}" role="tab" aria-controls="products-{{category}}" {{#selected}} aria-selected="true" {{/selected}}>{{category}}</a>
+                </li>
+            {{/products}}
+        </ul>
+        <br />
+        <p>Want to support the creation of more products like these? <a target="_blank" href="https://www.patreon.com/bePatron?u=8670881">Become a Patron</a>!
+            <a href="https://www.patreon.com/bePatron?u=8670881" data-patreon-widget-type="become-patron-button">Become a Patron!</a>
+            <script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+        </p>
+    </div>
+    <div class="col-12 col-sm-9 col-lg-9">
+        <div class="tab-content" id="myTabContent">
+            {{#products}}
+                <div class="tab-pane fade {{#selected}}show active{{/selected}}" id="products-{{category}}" role="tabpanel" aria-labelledby="products-{{category}}-tab">
+                    <h1>{{category}}</h1>
+                    <p>{{description}}</p>
+                    <div class="row mb-5">
+                        <div class="col"><img class="img-fluid" src="{{image}}"></div>
+                        <div class="col">
+                            {{{cta}}}
+                        </div>
+                    </div>
+                    <h2>{{testimonial-name}}</h2>
+                    <div class="row">
+                        {{#testimonials}}
+                            <div class="col">
+                                {{{html}}}
+                            </div>
+                        {{/testimonials}}
+                    </div>
+                </div>
+            {{/products}}
+        </div>
+    </div>
+</div>
+
+{{> footer}}
