@@ -1,4 +1,31 @@
 [{
+  "category_name": "Overarching Characteristics",
+  "items": [{
+      "name": "Activity",
+      "genesis": "Genesis",
+      "custom": "Custom",
+      "product_rental": "Product (+rental)",
+      "commodity_utility": "Comodity (+utility)"
+    },{
+      "name": "Data",
+      "genesis": "Unmodelled",
+      "custom": "Divergent",
+      "product_rental": "Convergent",
+      "commodity_utility": "Modelled"
+    },{
+      "name": "Practice",
+      "genesis": "Novel",
+      "custom": "Emerging",
+      "product_rental": "Good",
+      "commodity_utility": "Best"
+    },{
+      "name": "Knowledge",
+      "genesis": "Concept",
+      "custom": "Hypothesis",
+      "product_rental": "Theory",
+      "commodity_utility": "Universally Accepted"
+    }]
+  }, {
   "category_name": "Characteristics",
   "items": [{
     "name": "Ubiquity",
